@@ -1,0 +1,26 @@
+    .header input{
+        float: left;
+        margin: 20px;
+    }
+
+    .container{
+        clear: both;
+    }
+    
+    .container ul {
+      list-style-type: none;
+    }
+
+    .container label,img{
+      display : inline-block;
+      margin: 10px;
+    }
+
+    .starred{
+        background: red;
+    }
+
+    .not-starred{
+        background: green;
+    }
+  }
