@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ShoppingCart from './ShoppingCart';
+import DesignerNews from './DesignerNews';
 
 ReactDOM.render(
-  <ShoppingCart headerText="Designer News"/>,
+  <DesignerNews headerText="Designer News"/>,
   document.getElementById('root')
 );

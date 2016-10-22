@@ -1,11 +1,11 @@
 import React from 'react';
-import Product from './Product';
+import News from './News';
 
-class ProductList extends React.Component {
+class NewsList extends React.Component {
   render() {
-    var products = this.props.productList.sort(function(a,b) {return b.count - a.count}).map(item => {
+    var news = this.props.newsList.sort(function(a,b) {return b.count - a.count}).map(item => {
       return (
-        <Product
+        <News
           key={item.id}
           starred={this.props.starred}
           updateCount={this.props.updateCount}
@@ -19,7 +19,7 @@ class ProductList extends React.Component {
       <div className="container">
         <div className="products-list">
           <ul className="clearfix">
-            {products}
+            {news}
           </ul>
         </div>
       </div> 
@@ -27,4 +27,4 @@ class ProductList extends React.Component {
   }
 }
 
-export default ProductList;
+export default NewsList;

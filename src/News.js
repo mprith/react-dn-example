@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Product extends React.Component {
+class News extends React.Component {
   constructor(props) {
     super(props);
     this.star = this.star.bind(this);
@@ -28,4 +28,4 @@ class Product extends React.Component {
   }
 }
 
-export default Product;
+export default News;

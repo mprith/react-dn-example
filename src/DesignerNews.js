@@ -1,36 +1,36 @@
 import React from 'react';
 import products from './data/data';
 import Header from './header';
-import ProductList from './ProductList';
+import NewsList from './NewsList';
 
-class ShoppingCart extends React.Component {
+class DesignerNews extends React.Component {
   constructor(props) {
     super(props);
     this.starred = this.starred.bind(this);
     this.updateCount = this.updateCount.bind(this);
 
     this.state = {
-      productList: products,
+      newsList: products,
     }
   }
 
   starred(id) {
-    var productList = this.state.productList.slice(0).map(product => Object.assign({}, product));
-    var product = productList.find(product => product.id === id);
+    var newsList = this.state.newsList.slice(0).map(product => Object.assign({}, product));
+    var product = newsList.find(product => product.id === id);
     product.isStarred = true;
     product.status = true;
     this.setState({
-      productList
+      newsList
     });
   }
 
   updateCount(id) {
-    var productList = this.state.productList.slice(0).map(product => Object.assign({}, product));
-    var product = productList.find(product => product.id === id);
+    var newsList = this.state.newsList.slice(0).map(product => Object.assign({}, product));
+    var product = newsList.find(product => product.id === id);
     product.count++;
 
     this.setState({
-      productList
+      newsList
     });
   }
 
@@ -39,8 +39,8 @@ class ShoppingCart extends React.Component {
     return (
       <div>
         <Header />
-        <ProductList
-          productList={this.state.productList}
+        <NewsList
+          newsList={this.state.newsList}
           starred={this.starred}
           updateCount={this.updateCount}
         />
@@ -49,4 +49,4 @@ class ShoppingCart extends React.Component {
   }
 }
 
-export default ShoppingCart;
+export default DesignerNews;
